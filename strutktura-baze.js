@@ -17,18 +17,18 @@ const struktura = {
         group: "int", // ID grupe kojoj vježba pripada,
         date: "timestamp",
         data: {
-            reps: "int",
-            repRange: "int",
-            rpe: "int",
-            time: "int",
-            weight: "int"
+            reps: "int", // ili Boolen, true false
+            repRange: "int", // ili Boolen, true false
+            rpe: "int", // ili Boolen, true false
+            time: "int", // ili Boolen, true false
+            weight: "int" // ili Boolen, true false
         }
     },
     groups: {
         id: "int",
         name: "string",
         parent: "id", // Parent grupa kojoj grupa pripada
-        date: "timestamp",
+        date: "timestamp"
     },
     userExercises: {
         // Tablica sa vježbama korisnika, pošto korisnici mogu kreirati svoje vježbe, sve vježbe ne smiju biti dostupne svim korisnicima
@@ -46,14 +46,16 @@ const struktura = {
     workouts: {
         id: "int",
         date: "timestamp",
-        note: "string"
+        note: "string",
+        workoutFinished: "int" // ili Boolen, true false
     },
     workoutExercises: {
         id: "int",
         workoutID: "int",
         exerciseID: "int",
         date: "timestamp",
-        note: "string"
+        note: "string",
+        exerciseFinished: "int" // ili Boolen, true false
     },
     exerciseSets: {
         id: "int",
@@ -69,4 +71,4 @@ const struktura = {
             video: "string" // nećemo sad radit ali stavljam samo
         }
     }
-}
+};
