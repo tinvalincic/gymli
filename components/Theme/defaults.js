@@ -7,7 +7,8 @@ export const palette = {
     gray: {
         normal: "#dddddd",
         light: "#f7f7f7",
-        dark: "#bbbbbb"
+        dark: "#bbbbbb",
+        darker: "#a5a5a5"
     },
     purple: {
         normal: "#5740b2",
@@ -21,6 +22,10 @@ export const palette = {
         normal: "#545454",
         light: "#a0a0a0",
         dark: "#383838"
+    },
+    black: {
+        normal: "#010101",
+        dark: "#000000"
     }
 };
 
