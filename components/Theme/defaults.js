@@ -37,5 +37,9 @@ export const base = {
     durationNormal: "0.3s",
     durationSlow: "0.4s",
     transitionDefault: "ease-in-out",
-    lineHeight: "1.4"
+    lineHeight: "1.4",
+    paddingXs: "3px",
+    paddingSm: "5px",
+    paddingMd: "10px",
+    paddingLg: "15px"
 };

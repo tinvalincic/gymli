@@ -20,6 +20,16 @@ const theme = {
         primary: base.durationNormal,
         secondary: base.durationNormal,
         tertiary: base.durationNormal
+    },
+    fontSizeButton: {
+        small: base.fontSizeSm,
+        normal: base.fontSizeMd,
+        large: base.fontSizeLg
+    },
+    paddingButton: {
+        small: `${base.paddingXs} ${base.paddingSm}`,
+        normal: `${base.paddingSm} ${base.paddingMd}`,
+        large: `${base.paddingMd} ${base.paddingLg}`
     }
 };
 
