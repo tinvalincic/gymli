@@ -1,5 +1,6 @@
 import React from "react";
 import theme from "../Theme";
+import PropTypes from "prop-types";
 
 const Button = ({ type = "primary", onClickHandle, ...props }) => {
     return (
@@ -17,6 +18,12 @@ const Button = ({ type = "primary", onClickHandle, ...props }) => {
             `}</style>
         </button>
     );
+};
+
+Button.propTypes = {
+    type: PropTypes.string,
+    onClickHandle: PropTypes.func,
+    children: PropTypes.children
 };
 
 export default Button;
