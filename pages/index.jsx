@@ -2,11 +2,19 @@ import React from "react";
 import Link from "next/link";
 import Head from "../components/head";
 import Nav from "../components/nav";
+import Button from "../components/Button";
+import Range from "../components/Range";
 
 const Home = () => (
     <div>
         <Head title="Home" />
         <Nav />
+
+        <Button type="button" onClickHandle={() => console.log("click")}>
+            Test2
+        </Button>
+
+        <Range min="10" max="300" step="25" />
 
         <div className="hero">
             <h1 className="title">Welcome to Next!</h1>
