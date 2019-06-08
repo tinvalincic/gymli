@@ -2,11 +2,16 @@ import React from "react";
 import Link from "next/link";
 import Head from "../components/head";
 import Nav from "../components/nav";
+import Button from "../components/Button";
 
 const Home = () => (
     <div>
         <Head title="Home" />
         <Nav />
+
+        <Button type="button" onClickHandle={() => console.log("click")}>
+            Test2
+        </Button>
 
         <div className="hero">
             <h1 className="title">Welcome to Next!</h1>
