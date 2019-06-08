@@ -20,6 +20,16 @@ const theme = {
         primary: base.durationNormal,
         secondary: base.durationNormal,
         tertiary: base.durationNormal
+    },
+    uxRange: {
+        background: palette.gray.normal,
+        thumb: palette.red.normal,
+        border: palette.black.normal,
+        borderDark: palette.black.dark,
+        fill: palette.gray.darker,
+    },
+    numberColor: {
+        default: palette.red.normal
     }
 };
 
