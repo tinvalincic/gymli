@@ -31,9 +31,9 @@ export const palette = {
 
 export const base = {
     fontFamily: "'Raleway',Arial,sans-serif",
-    fontSizeSm: "11px",
-    fontSizeMd: "14px",
-    fontSizeLg: "16px",
+    fontSizeSm: "13px",
+    fontSizeMd: "15px",
+    fontSizeLg: "17px",
     borderRadius: "0px",
     fontWeightNormal: "400",
     fontWeightMedium: "500",
@@ -46,5 +46,11 @@ export const base = {
     paddingXs: "3px",
     paddingSm: "5px",
     paddingMd: "10px",
-    paddingLg: "15px"
+    paddingLg: "15px",
+    paddingXLg: "20px",
+    marginXs: "2px",
+    marginSm: "5px",
+    marginMd: "10px",
+    marginLg: "15px",
+    marginXLg: "20px"
 };
