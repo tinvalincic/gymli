@@ -15,6 +15,11 @@ export const palette = {
         light: "#9150e0",
         dark: "#3e2d80"
     },
+    blue: {
+        normal: "#5D737E",
+        light: "#7E8E96",
+        dark: "#435D6A"
+    },
     white: {
         normal: "#fff"
     },
@@ -25,6 +30,7 @@ export const palette = {
     },
     black: {
         normal: "#010101",
+        light: "#363636",
         dark: "#000000"
     }
 };

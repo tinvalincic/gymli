@@ -10,9 +10,13 @@ const Button = ({
     classProp = "",
     onClickHandle,
     ...props
-}) => {    
+}) => {
     return (
-        <button type="button" onClick={onClickHandle} className={`btn ${classProp} ${active ? "active" : ""}`}>
+        <button
+            type="button"
+            onClick={onClickHandle}
+            className={`btn ${classProp} ${active ? "active" : ""}`}
+        >
             {props.children}
             <style jsx>{`
                 .btn {
@@ -23,7 +27,9 @@ const Button = ({
                     width: ${display === "block" ? "100%" : "auto"};
                     padding: ${theme.paddingButton[size]};
                     border: 0px;
-                    margin: ${theme.marginButton[display !== "block" ? "normal" : display][size]};
+                    margin: ${theme.marginButton[
+                        display !== "block" ? "normal" : display
+                    ][size]};
                     vertical-align: middle;
                     text-align: center;
                 }
@@ -31,7 +37,7 @@ const Button = ({
                     background-color: ${theme.backgroundButtonHover[type]};
                     transition: ${theme.transitionButton[type]};
                 }
-                .btn.active{
+                .btn.active {
                     background-color: ${theme.backgroundButtonActive[type]};
                     border-left: ${display === "block" ? "3px solid" : "0px"};
                     border-left-color: ${theme.borderColorButtonActive[type]};
@@ -48,7 +54,10 @@ Button.propTypes = {
     display: PropTypes.string,
     onClickHandle: PropTypes.func,
     classProp: PropTypes.string,
-    children: PropTypes.element.isRequired
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]).isRequired
 };
 
 export default Button;
