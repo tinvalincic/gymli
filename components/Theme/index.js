@@ -1,153 +1,62 @@
-import { palette, base } from "./defaults";
-
-const theme = {
-    colorButton: {
-        primary: palette.white.normal,
-        secondary: palette.ink.normal,
-        tertiary: palette.white.normal
+export const palette = {
+    red: {
+        normal: "#e35751",
+        light: "#ff7872",
+        dark: "#ca4b46"
     },
-    colorButtonActive: {
-        primary: palette.red.normal,
-        secondary: palette.gray.normal,
-        tertiary: palette.purple.normal
+    gray: {
+        normal: "#dddddd",
+        light: "#f7f7f7",
+        dark: "#bbbbbb",
+        darker: "#a5a5a5"
     },
-    backgroundButton: {
-        primary: palette.red.normal,
-        secondary: palette.gray.normal,
-        tertiary: palette.purple.normal
+    purple: {
+        normal: "#5740b2",
+        light: "#9150e0",
+        dark: "#3e2d80"
     },
-    backgroundButtonActive: {
-        primary: palette.white.normal,
-        secondary: palette.white.normal,
-        tertiary: palette.white.normal
+    blue: {
+        normal: "#5D737E",
+        light: "#7E8E96",
+        dark: "#435D6A"
     },
-    backgroundButtonHover: {
-        primary: palette.red.light,
-        secondary: palette.gray.light,
-        tertiary: palette.purple.light
+    white: {
+        normal: "#fff"
     },
-    backgroundButtonHoverActive: {
-        primary: palette.white.normal,
-        secondary: palette.white.normal,
-        tertiary: palette.white.normal
+    ink: {
+        normal: "#545454",
+        light: "#a0a0a0",
+        dark: "#383838"
     },
-    borderColorButtonActive: {
-        primary: palette.red.normal,
-        secondary: palette.gray.normal,
-        tertiary: palette.purple.normal
-    },
-    transitionButton: {
-        primary: base.durationNormal,
-        secondary: base.durationNormal,
-        tertiary: base.durationNormal
-    },
-    fontSizeButton: {
-        small: base.fontSizeSm,
-        normal: base.fontSizeMd,
-        large: base.fontSizeLg
-    },
-    paddingButton: {
-        small: `${base.paddingSm} ${base.paddingMd}`,
-        normal: `${base.paddingMd} ${base.paddingLg}`,
-        large: `${base.paddingLg} ${base.paddingXLg}`
-    },
-    marginButton: {
-        block: {
-            small: `${base.paddingSm} 0px`,
-            normal: `${base.marginMd} 0px`,
-            large: `${base.paddingLg} 0px`
-        },
-        normal: {
-            small: `${base.marginXs}`,
-            normal: `${base.marginSm}`,
-            large: `${base.paddingMd}`
-        }
-    },
-    uxRange: {
-        background: palette.gray.normal,
-        thumb: palette.red.normal,
-        border: palette.black.normal,
-        borderDark: palette.black.dark,
-        fill: palette.gray.darker
-    },
-    numberColor: {
-        default: palette.red.normal
-    },
-    chartSettings: {
-        line: {
-            borderColor: palette.white.normal,
-            pointBorderColor: palette.red.normal,
-            pointHoverBorderColor: palette.red.normal,
-            pointBackgroundColor: palette.black.light,
-            pointHoverBackgroundColor: palette.white.normal,
-            pointHoverBorderWidth: 1,
-            pointHoverRadius: 6,
-            pointBorderWidth: 1,
-            pointRadius: 7,
-            borderWidth: 2
-        },
-        bar: {
-            borderColor: "transparent",
-            borderWidth: 0
-        },
-        doughnut: {
-            borderColor: "transparent",
-            borderWidth: 0
-        }
-    },
-    chartPalette: {
-        bar: {
-            light: [
-                palette.red.light,
-                palette.purple.light,
-                palette.gray.light,
-                palette.white.normal,
-                palette.blue.light
-            ],
-            normal: [
-                palette.red.normal,
-                palette.purple.normal,
-                palette.gray.dark,
-                palette.white.normal,
-                palette.blue.normal
-            ],
-            dark: [
-                palette.red.dark,
-                palette.purple.dark,
-                palette.gray.dark,
-                palette.white.normal,
-                palette.blue.dark
-            ]
-        },
-        doughnut: {
-            light: [
-                palette.red.light,
-                palette.purple.light,
-                palette.gray.light,
-                palette.white.normal,
-                palette.blue.light
-            ],
-            normal: [
-                palette.red.normal,
-                palette.purple.normal,
-                palette.gray.normal,
-                palette.white.normal,
-                palette.blue.normal
-            ],
-            dark: [
-                palette.red.dark,
-                palette.purple.dark,
-                palette.gray.dark,
-                palette.white.normal,
-                palette.blue.dark
-            ]
-        },
-        line: {
-            light: "rgba(0, 0, 0, 0.2)",
-            normal: "rgba(0, 0, 0, 0.2)",
-            dark: "rgba(0, 0, 0, 0.2)"
-        }
+    black: {
+        normal: "#010101",
+        light: "#363636",
+        dark: "#000000"
     }
 };
 
-export default theme;
+export const base = {
+    fontFamily: "'Raleway',Arial,sans-serif",
+    fontSizeSm: "13px",
+    fontSizeMd: "15px",
+    fontSizeLg: "17px",
+    borderRadius: "0px",
+    fontWeightNormal: "400",
+    fontWeightMedium: "500",
+    fontWeightBold: "700",
+    durationFast: "0.15s",
+    durationNormal: "0.3s",
+    durationSlow: "0.4s",
+    transitionDefault: "ease-in-out",
+    lineHeight: "1.4",
+    paddingXs: "3px",
+    paddingSm: "5px",
+    paddingMd: "10px",
+    paddingLg: "15px",
+    paddingXLg: "20px",
+    marginXs: "2px",
+    marginSm: "5px",
+    marginMd: "10px",
+    marginLg: "15px",
+    marginXLg: "20px"
+};

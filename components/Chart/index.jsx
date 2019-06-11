@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Doughnut, Line, Bar } from "react-chartjs-2";
-import { getChartDatasets } from "./helpers";
+import { getChartDatasets, getChartOptions } from "./helpers";
 
 const Chart = ({
     type = "line",
@@ -14,40 +14,10 @@ const Chart = ({
         labels: labels,
         datasets: getChartDatasets(type, kind)
     };
-
     initialData.datasets.map(dataset => (dataset.data = data));
 
-    const options = {
-        scales: {
-            yAxes: [
-                {
-                    ticks: {
-                        beginAtZero: true,
-                        fontColor: "#909090"
-                    }
-                }
-            ],
-            xAxes: [
-                {
-                    ticks: {
-                        fontColor: "#909090"
-                    }
-                }
-            ]
-        },
-        legend: {
-            display: legend
-        },
-        tooltips: {
-            callbacks: {
-                label: function(tooltipItem) {
-                    return tooltipItem.yLabel;
-                }
-            }
-        },
-        responsive: true,
-        showXLabels: 5
-    };
+    const options = getChartOptions(type, kind, legend);
+
     let generatedChart;
     switch (type) {
         case "line":
@@ -63,6 +33,7 @@ const Chart = ({
             generatedChart = <Line data={[initialData]} options={options} />;
             break;
     }
+
     return generatedChart;
 };
 

@@ -1,13 +1,23 @@
-import React from 'react';
-import theme from "../Theme";
-import PropTypes from 'prop-types';
-import css from 'styled-jsx/css'
+import React from "react";
+import theme from "./theme";
+import PropTypes from "prop-types";
+import css from "styled-jsx/css";
 
-
-const Input = ({ type, id, name, className: klasa = "", placeholder, min, max, step, value, onChangeHandler }) => {
+const Input = ({
+    type,
+    id,
+    name,
+    className: klasa = "",
+    placeholder,
+    min,
+    max,
+    step,
+    value,
+    onChangeHandler
+}) => {
     //#region CSS values for different types
     let prepareCSS;
-    switch (type){
+    switch (type) {
         case "range":
             prepareCSS = css.resolve`
                 input[type=range] {
@@ -111,26 +121,28 @@ const Input = ({ type, id, name, className: klasa = "", placeholder, min, max, s
             break;
         default:
             prepareCSS = css.resolve``;
-        
     }
     const { className, styles } = prepareCSS;
     //#endregion
-    return <>
-        <input 
-            type={type} 
-            id={id} 
-            name={name}
-            placeholder={placeholder} 
-            className={className+' '+klasa}
-            min={min} 
-            max={max} 
-            step={step} 
-            value={value} 
-            onChange={onChangeHandler}
-            onBlur={onChangeHandler}
-        />{styles}
-    </>;
-}
+    return (
+        <>
+            <input
+                type={type}
+                id={id}
+                name={name}
+                placeholder={placeholder}
+                className={className + " " + klasa}
+                min={min}
+                max={max}
+                step={step}
+                value={value}
+                onChange={onChangeHandler}
+                onBlur={onChangeHandler}
+            />
+            {styles}
+        </>
+    );
+};
 //#region proptypes
 Input.propTypes = {
     type: PropTypes.string,
@@ -142,10 +154,7 @@ Input.propTypes = {
     min: PropTypes.number,
     max: PropTypes.number,
     onChangeHandler: PropTypes.func,
-    value: PropTypes.oneOfType([
-        PropTypes.number,
-        PropTypes.string
-    ])
-}
+    value: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+};
 //#endregion
 export default Input;

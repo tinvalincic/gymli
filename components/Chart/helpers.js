@@ -1,4 +1,13 @@
-import theme from "../Theme";
+import theme from "./theme";
+
+function purifyObject(obj) {
+    Object.entries(obj).map(([key, val]) => {
+        typeof val === "object"
+            ? purifyObject(val)
+            : val == null && delete obj[key];
+    });
+    return obj;
+}
 
 export function getChartDatasets(chartType, chartKind) {
     const chartDataset = [
@@ -22,10 +31,45 @@ export function getChartDatasets(chartType, chartKind) {
             backgroundColor: theme.chartPalette[chartType][chartKind]
         }
     ];
-    return chartDataset.map(dataset => {
-        Object.keys(dataset).map(
-            key => dataset[key] == null && delete dataset[key]
-        );
-        return dataset;
-    });
+    return chartDataset.map(dataset => purifyObject(dataset));
+}
+
+export function getChartOptions(chartType, chartKind, displayLegend) {
+    const chartOptions = {
+        scales: {
+            yAxes: undefined,
+            xAxes: undefined
+            // yAxes: [
+            //     {
+            //         ticks: {
+            //             beginAtZero: true,
+            //             fontColor: theme.chartSettings[chartType].legendColor
+            //         }
+            //     }
+            // ],
+            // xAxes: [
+            //     {
+            //         ticks: {
+            //             fontColor: theme.chartSettings[chartType].legendColor
+            //         }
+            //     }
+            // ]
+        },
+        legend: {
+            display: displayLegend
+        },
+        tooltips: {
+            callbacks: {
+                label: function(tooltipItem) {
+                    return tooltipItem.yLabel;
+                }
+            }
+        },
+        responsive: true,
+        showXLabels: 5
+    };
+
+    console.log(purifyObject(chartOptions));
+
+    return purifyObject(chartOptions);
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import theme from "../Theme";
+import theme from "./theme";
 import PropTypes from "prop-types";
 
 const Button = ({
@@ -57,7 +57,8 @@ Button.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
-    ]).isRequired
+    ]).isRequired,
+    active: PropTypes.bool
 };
 
 export default Button;
