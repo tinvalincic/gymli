@@ -1,36 +1,62 @@
-import { palette, base } from "./defaults";
-
-const theme = {
-    colorButton: {
-        primary: palette.white.normal,
-        secondary: palette.ink.normal,
-        tertiary: palette.white.normal
+export const palette = {
+    red: {
+        normal: "#e35751",
+        light: "#ff7872",
+        dark: "#ca4b46"
     },
-    backgroundButton: {
-        primary: palette.red.normal,
-        secondary: palette.gray.normal,
-        tertiary: palette.purple.normal
+    gray: {
+        normal: "#dddddd",
+        light: "#f7f7f7",
+        dark: "#bbbbbb",
+        darker: "#a5a5a5"
     },
-    backgroundButtonHover: {
-        primary: palette.red.light,
-        secondary: palette.gray.light,
-        tertiary: palette.purple.light
+    purple: {
+        normal: "#5740b2",
+        light: "#9150e0",
+        dark: "#3e2d80"
     },
-    transitionButton: {
-        primary: base.durationNormal,
-        secondary: base.durationNormal,
-        tertiary: base.durationNormal
+    blue: {
+        normal: "#5D737E",
+        light: "#7E8E96",
+        dark: "#435D6A"
     },
-    uxRange: {
-        background: palette.gray.normal,
-        thumb: palette.red.normal,
-        border: palette.black.normal,
-        borderDark: palette.black.dark,
-        fill: palette.gray.darker,
+    white: {
+        normal: "#fff"
     },
-    numberColor: {
-        default: palette.red.normal
+    ink: {
+        normal: "#545454",
+        light: "#a0a0a0",
+        dark: "#383838"
+    },
+    black: {
+        normal: "#010101",
+        light: "#363636",
+        dark: "#000000"
     }
 };
 
-export default theme;
+export const base = {
+    fontFamily: "'Raleway',Arial,sans-serif",
+    fontSizeSm: "13px",
+    fontSizeMd: "15px",
+    fontSizeLg: "17px",
+    borderRadius: "0px",
+    fontWeightNormal: "400",
+    fontWeightMedium: "500",
+    fontWeightBold: "700",
+    durationFast: "0.15s",
+    durationNormal: "0.3s",
+    durationSlow: "0.4s",
+    transitionDefault: "ease-in-out",
+    lineHeight: "1.4",
+    paddingXs: "3px",
+    paddingSm: "5px",
+    paddingMd: "10px",
+    paddingLg: "15px",
+    paddingXLg: "20px",
+    marginXs: "2px",
+    marginSm: "5px",
+    marginMd: "10px",
+    marginLg: "15px",
+    marginXLg: "20px"
+};
