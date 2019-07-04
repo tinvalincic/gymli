@@ -15,8 +15,10 @@ const JuricaComponents = () => {
             <p>{vrijednost}</p>
             <Input type="range" min={0} max={200} step={25} value={vrijednost} className="nekaKlasa" onChangeHandler={onChangeHandler} />
             <Input type="number" min={0} max={5} step={0.5}  />
+            <Input type="text" placeholder="OVdje tekst" />
         </>
     );
 };
 
 export default JuricaComponents;
+ 
