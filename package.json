@@ -3,7 +3,9 @@
     "scripts": {
         "dev": "next",
         "build": "next build",
-        "start": "next start"
+        "start": "next start",
+        "test": "mocha --require @babel/register",
+        "jurica-test": "mocha --require @babel/register -g \"Converting kg to lbs and the other way around\""
     },
     "dependencies": {
         "chart.js": "^2.8.0",
@@ -16,12 +18,16 @@
         "redux-thunk": "^2.3.0"
     },
     "devDependencies": {
+        "@babel/core": "^7.5.4",
+        "@babel/register": "^7.4.4",
+        "chai": "^4.2.0",
         "eslint": "^5.16.0",
         "eslint-config-prettier": "^4.3.0",
-        "eslint-plugin-react": "^7.13.0",
-        "eslint-plugin-react-hooks": "^1.0.2",
         "eslint-plugin-import": "^2.15.0",
         "eslint-plugin-jsx-a11y": "^6.2.0",
+        "eslint-plugin-react": "^7.13.0",
+        "eslint-plugin-react-hooks": "^1.0.2",
+        "mocha": "^6.1.4",
         "prettier": "1.18.0"
     }
 }
